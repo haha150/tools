@@ -1,0 +1,20 @@
+apt install ufw
+
+nano /etc/ufw/sysctl.conf
+net/ipv4/ip_forward=1
+net/ipv6/conf/default/forwarding=1
+
+nano /etc/default/ufw
+DEFAULT_FORWARD_POLICY="ACCEPT"
+
+nano /etc/ufw/before.rules
+*nat
+:POSTROUTING ACCEPT [0:0]
+
+-A POSTROUTING -s 192.168.0.0/24 -o eth0 -j MASQUERADE
+
+COMMIT
+
+ufw allow 22/tcp
+ufw allow 67/udp
+ufw enable
