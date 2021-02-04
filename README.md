@@ -11,10 +11,10 @@ default-lease-time 3600;
 max-lease-time 7200;  
 authoritative;  
 subnet 192.168.0.0 netmask 255.255.255.0 {  
-	option routers 192.168.0.1;  
-	option subnet-mask 255.255.255.0;  
-	option domain-name-servers 1.1.1.1, 8.8.8.8;  
-	range 192.168.0.100 192.168.0.200;  
+&nbsp;&nbsp;&nbsp;&nbsp;option routers 192.168.0.1;  
+&nbsp;&nbsp;&nbsp;&nbsp;option subnet-mask 255.255.255.0;  
+&nbsp;&nbsp;&nbsp;&nbsp;option domain-name-servers 1.1.1.1, 8.8.8.8;  
+&nbsp;&nbsp;&nbsp;&nbsp;range 192.168.0.100 192.168.0.200;  
 }
 
 systemctl restart isc-dhcp-server.service  
