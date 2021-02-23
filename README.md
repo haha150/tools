@@ -48,3 +48,9 @@ ufw allow 67/udp
 ufw allow 1:65535/tcp  
 ufw allow 1:65535/udp  
 ufw enable  
+
+# APT-PROXY
+sudo nano /etc/apt/apt.conf.d/proxy.conf
+
+Acquire::http::Proxy "http://http-proxy.sero.gic.ericsson.se:8080";
+Acquire::https::Proxy "http://http-proxy.sero.gic.ericsson.se:8080";
