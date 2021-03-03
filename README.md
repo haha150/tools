@@ -17,6 +17,9 @@ subnet 192.168.0.0 netmask 255.255.255.0 {
 &nbsp;&nbsp;&nbsp;&nbsp;range 192.168.0.100 192.168.0.200;  
 }
 
+nano /etc/default/isc-dhcp-server  
+add interface
+
 systemctl restart isc-dhcp-server.service  
 
 dhcp-lease-list  
