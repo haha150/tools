@@ -52,5 +52,5 @@ ufw enable
 
 # APT-PROXY
 nano /etc/apt/apt.conf.d/proxy.conf  
-Acquire::http::Proxy "http://<ip>:<port>";  
-Acquire::https::Proxy "http://<ip>:<port>";  
+Acquire::http::Proxy "http://ip:port";  
+Acquire::https::Proxy "http://ip:port";  
