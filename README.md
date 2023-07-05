@@ -1,5 +1,5 @@
 # tools
-some tools
+https://github.com/massgravel/Microsoft-Activation-Scripts
 
 # DHCP
 apt install isc-dhcp-server -y
